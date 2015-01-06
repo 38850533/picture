@@ -60,6 +60,12 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testNegate(){
+	  Picture beach = new Picture("beach.jpg");
+	  beach.negate();
+	  beach.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)

@@ -112,6 +112,20 @@ public class Picture extends SimplePicture
 	  }
   }
   
+  public void negate(){ // subtracts the current value of each
+	  //pixel from 255 and this creates an inverse color effect
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (int row = 0; row < pixels.length; row++)
+	  {
+		  for (int column = 0; column < pixels[0].length; column++)
+		  {
+			  pixels[row][column].setRed(255-pixels[row][column].getRed());
+			  pixels[row][column].setBlue(255-pixels[row][column].getBlue());
+			  pixels[row][column].setGreen(255-pixels[row][column].getGreen());
+		  }
+	  }
+  }
+  
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
