@@ -342,6 +342,17 @@ for (int fromCol = fromStartCol, toCol = startCol;
   }
   
   
+  public void createNewCollage()
+  {
+    Picture flower1 = new Picture("flower1.jpg");
+    Picture flower2 = new Picture("flower2.jpg");
+    this.copy(flower1,0,0, 20, 50, 30, 40);
+    this.copy(flower1, 70,0, 30, 35, 22, 29);
+    this.copy(flower2,500,0);
+    this.mirrorVertical();
+    this.write("collage.jpg");
+  }
+  
   /** Method to show large changes in color 
     * @param edgeDist the distance for finding edges
     */
