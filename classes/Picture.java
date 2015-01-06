@@ -126,6 +126,19 @@ public class Picture extends SimplePicture
 	  }
   }
   
+  public void grayscale(){ // sets the red,green and blue to be equal at that pixel
+	  //making a grayscale effect
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (int row = 0; row < pixels.length; row++){
+		  for (int column = 0; column < pixels[0].length; column++){
+			  int average = (pixels[row][column].getRed()+pixels[row][column].getGreen()+pixels[row][column].getBlue())/3;
+			  pixels[row][column].setRed(average);
+			  pixels[row][column].setGreen(average);
+			  pixels[row][column].setBlue(average);
+		  }
+	  } 
+  }
+  
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
