@@ -200,6 +200,20 @@ public class Picture extends SimplePicture
 	  }
   }
   
+  public void mirrorHorizontalBottomToTop(){ // same as the other mirrors but started
+	  // from the bottom now we're here
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel topPixel;
+	  Pixel bottomPixel;
+	  for (int row = 0; row < pixels.length/2; row++){
+		  for (int column = 0; column < pixels[0].length; column++){
+			  topPixel = pixels[row][column];
+			  bottomPixel = pixels[pixels.length-1-row][column];
+			  topPixel.setColor(bottomPixel.getColor());
+		  }
+	  }
+  }
+  
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
