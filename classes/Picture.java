@@ -98,6 +98,20 @@ public class Picture extends SimplePicture
     }
   }
   
+  public void onlyBlue()  // removes all red and green 
+  //from every pixel, and replaces keeps the blue values
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels)
+	  {
+		  for (Pixel pixelObj : rowArray)
+		  {
+			  pixelObj.setRed(0);
+			  pixelObj.setGreen(0);
+		  }
+	  }
+  }
+  
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */

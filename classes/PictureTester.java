@@ -17,6 +17,15 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testKeepOnlyBlue() // removes all red and green 
+  //from every pixel, and replaces keeps the blue values
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.onlyBlue();
+    beach.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
