@@ -17,8 +17,13 @@ public class PictureTester
     beach.explore();
   }
   
-  public static void testKeepOnlyBlue() // removes all red and green 
-  //from every pixel, and replaces keeps the blue values
+  public static void testNegate(){
+	  Picture beach = new Picture("beach.jpg");
+	  beach.negate();
+	  beach.explore();
+  }
+  
+  public static void testKeepOnlyBlue()
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
@@ -26,51 +31,12 @@ public class PictureTester
     beach.explore();
   }
   
-  /** Method to test mirrorVertical */
-  public static void testMirrorVertical()
-  {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorVertical();
-    caterpillar.explore();
-  }
-  
-  /** Method to test mirrorTemple */
-  public static void testMirrorTemple()
-  {
-    Picture temple = new Picture("temple.jpg");
-    temple.explore();
-    temple.mirrorTemple();
-    temple.explore();
-  }
-  
-  /** Method to test the collage method */
-  public static void testCollage()
-  {
-    Picture canvas = new Picture("640x480.jpg");
-    canvas.createCollage();
-    canvas.explore();
-  }
-  
-  /** Method to test edgeDetection */
-  public static void testEdgeDetection()
-  {
-    Picture swan = new Picture("swan.jpg");
-    swan.edgeDetection(10);
-    swan.explore();
-  }
-  
-  public static void testNegate(){
-	  Picture beach = new Picture("beach.jpg");
-	  beach.negate();
-	  beach.explore();
-  }
-  
   public static void testGrayscale(){
 	  Picture beach = new Picture("beach.jpg");
 	  beach.grayscale();
 	  beach.explore();
   }
+  
   public static void testFixUnderwater(){
 	  Picture water = new Picture("water.jpg");
 	  water.FixUnderwater();
